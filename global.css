@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Sen);
+
+* {
+    font-family: 'Sen', serif;
+    color: #1c1c1c;
+}
+
+.nav-list {
+    overflow: hidden;
+    background-color: #fff;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #858585;
+}
+
+.nav-item a:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    margin-top: 3px;
+    width: 0;
+    height: 2px;
+    background-color: #e1e1e1;
+    transition: .4s ease-in-out;
+  }
+
+  .nav-item a:hover:after {
+    width: 100%;
+  }
+
+.nav-item:first-child{
+    margin-right: auto;
+    margin-left: 10rem;
+}
+
+.nav-item:last-child{
+    margin-right: 10rem;
+}
+
+/* GALLERY AREA */
+
+.gallery {
+    margin-top: 10rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    display: flex;
+
+    /* background-color: rgb(183, 54, 54); */
+}
+
+/* BOX HOVER ATTRIBUTES */
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 3rem;
+    margin-right: 5rem;
+    align-items: center;
+  }
+
+  .box-contents {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .3);
+    transition: .5s ease;
+    background-position: center;
+    background-size: cover;
+  }
+
+  #bento .box-contents {
+    background-image: url('images/giftbox.jpeg');
+  }
+
+  #daliman .box-contents {
+    background-image: url('images/man1.png');
+  }
+
+  .hover-point {
+    position: absolute;
+    z-index: 2;
+    width: calc(100% / 3);
+    height: calc(100% / 3);
+  }
+  .hover-point:nth-child(1) {
+    top: 0;
+    left: 0;
+  }
+  .hover-point:nth-child(2) {
+    top: 0;
+    left: calc(100% / 3);
+  }
+  .hover-point:nth-child(3) {
+    top: 0;
+    right: 0;
+  }
+  .hover-point:nth-child(4) {
+    top: calc(100% / 3);
+    left: 0;
+  }
+  .hover-point:nth-child(5) {
+    top: calc(100% / 3);
+    right: 0;
+  }
+  .hover-point:nth-child(6) {
+    bottom: 0;
+    left: 0;
+  }
+  .hover-point:nth-child(7) {
+    bottom: 0;
+    left: calc(100% / 3);
+  }
+  .hover-point:nth-child(8) {
+    bottom: 0;
+    right: 0;
+  }
+  .hover-point:nth-child(1):hover ~ .box-contents {
+    box-shadow: 15px 15px 50px rgba(0, 0, 0, .3);
+    transform-origin: right top;
+    transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg);
+  }
+  .hover-point:nth-child(2):hover ~ .box-contents {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, .3);
+    transform-origin: center top;
+    transform: perspective(1000px) rotateX(10deg);
+  }
+  .hover-point:nth-child(3):hover ~ .box-contents {
+    box-shadow: -15px 15px 50px rgba(0, 0, 0, .3);
+    transform-origin: left top;
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg) rotateZ(-2deg);
+  }
+  .hover-point:nth-child(4):hover ~ .box-contents {
+    box-shadow: 15px 5px 50px rgba(0, 0, 0, .3);
+    transform-origin: left center;
+    transform: perspective(1000px) rotateY(-10deg);
+  }
+  .hover-point:nth-child(5):hover ~ .box-contents {
+    box-shadow: -15px 5px 50px rgba(0, 0, 0, .3);
+    transform-origin: right center;
+    transform: perspective(1000px) rotateY(10deg);
+  }
+  .hover-point:nth-child(6):hover ~ .box-contents {
+    box-shadow: 15px -15px 50px rgba(0, 0, 0, .3);
+    transform-origin: right bottom;
+    transform: perspective(1000px) rotateX(-10deg) rotateY(-10deg) rotateZ(-2deg);
+  }
+  .hover-point:nth-child(7):hover ~ .box-contents {
+    box-shadow: 0 -15px 50px rgba(0, 0, 0, .3);
+    transform-origin: center bottom;
+    transform: perspective(1000px) rotateX(-10deg);
+  }
+  .hover-point:nth-child(8):hover ~ .box-contents {
+    box-shadow: -15px -15px 50px rgba(0, 0, 0, .3);
+    transform-origin: left bottom;
+    transform: perspective(1000px) rotateX(-10deg) rotateY(10deg) rotateZ(2deg);
+  }
