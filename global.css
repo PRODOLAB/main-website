@@ -8,10 +8,10 @@
 .nav-list {
     overflow: hidden;
     background-color: #fff;
-    position: fixed; /* Set the navbar to fixed position */
+    /* position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    margin: 0;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -58,13 +58,19 @@
 /* GALLERY AREA */
 
 .gallery {
-    margin-top: 10rem;
     margin-right: 10rem;
     margin-left: 10rem;
     display: flex;
-
-    /* background-color: rgb(183, 54, 54); */
 }
+
+#gal1 .gallery {
+  margin-top: 10rem;
+}
+
+#gal2 .gallery {
+  margin-top: 0rem;
+}
+
 
 /* BOX HOVER ATTRIBUTES */
 
@@ -95,6 +101,14 @@
 
   #daliman .box-contents {
     background-image: url('images/man1.png');
+  }
+
+  #leginar .box-contents {
+    background-image: url('images/leginarha.svg');
+  }
+
+  #franch .box-contents {
+    background-image: url('images/franch.svg');
   }
 
   .hover-point {
